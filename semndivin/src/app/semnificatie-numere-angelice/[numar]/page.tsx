@@ -8,6 +8,8 @@ import {
   getRelatedNumbers,
   getAllAngelNumbers,
 } from "@/lib/angel-numbers";
+import Comments from "@/components/Comments";
+import ShareImageGenerator from "@/components/ShareImageGenerator";
 import {
   SITE_URL,
   SITE_NAME,
@@ -331,6 +333,14 @@ export default async function AngelNumberPage({ params }: PageProps) {
             </div>
           </section>
         )}
+
+        {/* Share Image Generator */}
+        <div className="mt-10">
+          <ShareImageGenerator number={n} message={an.spiritualMessage} />
+        </div>
+
+        {/* Comments */}
+        <Comments pageId={`angel-${n}`} title={`Experiențele Tale cu Numărul ${n}`} />
       </article>
     </>
   );

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { SITE_URL } from "@/lib/seo";
+import NewsletterForm from "@/components/NewsletterForm";
 
 const legalLinks = [
   { href: "/termeni-si-conditii", label: "Termeni și Condiții" },
@@ -30,6 +31,20 @@ export default function Footer() {
 
   return (
     <footer className="bg-gradient-to-b from-indigo-950 to-purple-950 border-t border-purple-800/30 mt-auto">
+      {/* Newsletter Section */}
+      <div className="border-b border-purple-800/30 py-10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl font-bold text-white mb-2">📬 Abonează-te la Newsletter</h2>
+          <p className="text-purple-300 mb-6">
+            Primești săptămânal mesajul angelic al numărului zilei, articole noi și ghiduri spirituale.
+          </p>
+          <div className="max-w-md mx-auto">
+            <NewsletterForm compact />
+          </div>
+          <p className="text-purple-500 text-xs mt-3">Niciun spam. Dezabonare oricând. Datele tale sunt protejate GDPR.</p>
+        </div>
+      </div>
+
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
